@@ -1,0 +1,151 @@
+/* 🌌 Futuristic Animated Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #c7d2fe, #e0e7ff, #f8fafc);
+  background-size: 200% 200%;
+  animation: bgMove 12s infinite alternate ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 20px;
+}
+
+/* Smooth background animation */
+@keyframes bgMove {
+  0% { background-position: 0% 20%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 80%; }
+}
+
+/* 🧊 Neo-Glass Game Container */
+.game-container {
+  width: 100%;
+  max-width: 950px;
+  padding: 30px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 4px 10px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 10px rgba(0, 0, 0, 0.05);
+
+  text-align: center;
+  margin-bottom: 40px;
+  transition: all 0.4s ease;
+}
+
+/* Hover Elevation */
+.game-container:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.18),
+    inset 0 5px 12px rgba(255, 255, 255, 0.5);
+}
+
+/* 🌟 Title */
+h1, h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+/* 🎮 High-End Canvas */
+canvas {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 4/3;
+  border-radius: 22px;
+
+  border: 3px solid rgba(148, 163, 184, 0.3);
+
+  background: linear-gradient(145deg, #ffffff, #eef2ff);
+  
+  box-shadow:
+    0 14px 22px rgba(0, 0, 0, 0.12),
+    inset 0 6px 12px rgba(255, 255, 255, 0.8),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.05);
+
+  margin-top: 25px;
+  transition: transform 0.3s ease;
+}
+
+/* Canvas Hover Glow */
+canvas:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 16px 26px rgba(0, 0, 0, 0.18),
+    0 0 18px rgba(96, 165, 250, 0.4);
+}
+
+/* 🔘 Premium Buttons */
+button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb, #1e3a8a);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+
+  margin: 12px;
+
+  box-shadow:
+    0 6px 18px rgba(59, 130, 246, 0.35),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35);
+
+  transition: all 0.25s ease;
+}
+
+/* Hover – Floating & Glow */
+button:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow:
+    0 8px 22px rgba(37, 99, 235, 0.45),
+    0 0 10px rgba(96, 165, 250, 0.6);
+}
+
+/* Active Click */
+button:active {
+  transform: scale(0.96);
+}
+
+/* ❌ Game Over */
+.game-over {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: #dc2626;
+  font-weight: 800;
+
+  text-shadow: 
+    0 4px 10px rgba(220, 38, 38, 0.4),
+    0 0 8px rgba(255, 0, 0, 0.2);
+
+  animation: popIn 0.8s ease;
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 480px) {
+  .game-container { padding: 20px; border-radius: 20px; }
+
+  canvas { border-radius: 14px; }
+
+  button { padding: 12px 18px; width: 45%; font-size: 0.9rem; }
+}
